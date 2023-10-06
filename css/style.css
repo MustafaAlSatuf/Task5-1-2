@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.slider{
+    width: 100%;
+    height: max-content;
+    
+    position: relative;
+    overflow: hidden;
+    
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+.btn-radio{
+position: absolute;
+bottom: 5%;
+left: 50%;
+transform: translateX(-50%);
+z-index: 100;
+
+}
+.images{
+    display: flex;
+    position: relative;
+   
+}
+.image-holder img{
+    width: 100%;
+   
+    transition: all 2sec ease-in;
+}
+.btn-radio button{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: #ddd solid 2px;
+    border-radius: 100%;
+    cursor: pointer;
+   
+    
+}
+.image-holder{
+    display: flex;
+   position: relative;
+   transform: translateX(0);
+   z-index: -1;
+   transition: tranform 2sec ease-in;
+}
+.btn-radio button:hover,
+.btn-radio button:active
+{
+    background-color: #ce9e44;
+}
+.btn-radio .active{
+    background-color: #ce9e44;
+}
+.slider .pre{
+    width: max-content;
+    height: max-content;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    margin-left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
+.slider .next{
+    width: max-content;
+    height: max-content;
+   font-size: 2rem;
+    position: absolute;
+    color: white;
+    top: 50%;
+    right: 0;
+    margin-right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.5s;
+    transform-origin: center;
+}
+.slider .next:hover,
+.slider .pre:hover{
+    color: #ce9e44;
+    transform: scale(1.5);
+}
+@media  (max-width:700px) {
+    html{
+        font-size: 10px;
+    }
+    
+}
+@media  (max-width:550px) {
+    
+    .slider .next{
+        display: none;
+    }
+    .slider .pre{
+        display: none;
+    }
+}
